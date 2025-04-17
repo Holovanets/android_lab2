@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:flow_horizontalGap="15dp"
+    android:padding="16dp">
+
+    <!-- ImageView для отображения селфи -->
+    <ImageView
+        android:id="@+id/selfieImageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:background="#D3D3D3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.5"
+    android:contentDescription="Селфі" />
+
+    <!-- Кнопка "Зробити селфі" -->
+    <Button
+        android:id="@+id/takeSelfieButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Зробити селфі"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/selfieImageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/sendSelfieButton"
+        app:layout_constraintHorizontal_chainStyle="spread" />
+
+    <!-- Кнопка "Відіслати селфі" -->
+    <Button
+        android:id="@+id/sendSelfieButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Відіслати селфі"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/selfieImageView"
+        app:layout_constraintStart_toEndOf="@id/takeSelfieButton"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
